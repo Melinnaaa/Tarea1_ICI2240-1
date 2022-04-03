@@ -1,8 +1,12 @@
-Para poder compilar el archivo de manera correcta hay que abrir una nueva terminal puede ser Powershell o gitbash, luego hay que crear el archivo ejecutable de la siguiente manera *.c ./Modelo/*.c -o main.exe, de esta manera se creara main.exe, y para poder ejecutarlo basta con introducir ./main.exe en la terminal y correria correctamente.
+(1) Cómo compilar la tarea
+
+Para poder compilar el archivo de manera correcta hay que abrir una nueva terminal puede ser Powershell o gitbash, luego hay que crear el archivo ejecutable de la siguiente manera " *.c ./Modelo/*.c -o main.exe ", de esta manera se creara main.exe, y para poder ejecutarlo basta con introducir " ./main.exe " en la terminal y correria correctamente.
+
+(2) las opciones que funcionan correctamente y las que no lo hacen indicando posibles causas
 
 Todas las funciones del programa funcionan de manera correcta, el unico pero seria la función get_csv_field, ya que que si el final del archivo no posee un salto de linea no lee el ultimo caracter.
 
-Aspectos positivos y a mejorar por cada uno de los integrantes (coevaluación):
+(3) Aspectos positivos y a mejorar por cada uno de los integrantes (coevaluación):
 
 Aspectos positivos:
 
@@ -16,7 +20,7 @@ Mejorar un poco más el trabajo en equipo.
 Mejorar un poco más la comunicación entre los integrantes al momento de trabajar.
 Mejorar la participación de algunos integrantes.
 
-Puntos de premio/castigo:
+(4)Puntos de premio/castigo:
 
 Integrante Arturo: 0
 Integrante Nicolas: 0
