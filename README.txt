@@ -11,11 +11,17 @@ Todas las funciones del programa funcionan de manera correcta, el unico pero ser
 
 Aspectos positivos:
 
+Sebastián Yáñez: Responsabilidad con el trabajo, apoyo al momento de trabajar.
 Arturo Reyes: Respondable al momento de trabajar, buen uso del tiempo y un buen manejo de los conocimientos.
+Felipe Zepeda: Atención y comprensión del trabajo, capacidad de escuchar y apoyar a otros.
+Nicolas Carvallo: Siempre dispuesto ayudar, estar siempre a la hora de trabajar.
 
 Aspectos a mejorar:
 
-Arturo Reyes: Mejorar un poco más el trabajo en equipo. 
+Felipe Zepeda: Comunicación entre otros miembros del equipo, dar más aporte del que se dio.
+Arturo Reyes: Mejorar el trabajo en equipo.
+Sebastián Yáñez: Aportar un poco más para la próxima vez.
+Nicolas Carvallo: Aportar con mas ideas de las que pude dar, estudiar mas ya que voy iba un poco mas atrasado a mi equipo.
 
 (4) Puntos de premio/castigo:
 
