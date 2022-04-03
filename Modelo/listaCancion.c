@@ -194,6 +194,7 @@ void exportarCanciones(listaCanciones* listaCancion, char* nombreArchivo, List* 
 void agregarCancion(listaCanciones* listaCancion, cancion* cancionUsuario, List* datos)
 {
   datosLista* tmpDatos = (datosLista*)calloc(1, sizeof(char));
+  //Se comprueba que la cancion que se desea agregar no existe, si no existe se agrega
   if(comprobarSiEsta(cancionUsuario, listaCancion->ListaReproduccion) == 0)
   {
     int largo = strlen(cancionUsuario->nombreLista);
@@ -201,7 +202,7 @@ void agregarCancion(listaCanciones* listaCancion, cancion* cancionUsuario, List*
     strcpy(tmpDatos->nombreLista, cancionUsuario->nombreLista);
     pushBack(listaCancion->ListaReproduccion, cancionUsuario);
     listaCancion->totalCanciones = listaCancion->totalCanciones + 1;
-    insertarLista(tmpDatos, datos);
+    insertarLista(tmpDatos, datos); 
   }
   //Si se encuentra en la lista se libera la memoria
   else
@@ -214,6 +215,7 @@ void agregarCancion(listaCanciones* listaCancion, cancion* cancionUsuario, List*
   }
 }
 
+//Imprime todos los datos que contiene una cancion.
 void imprimirDatosCanciones (cancion* tmp)
 {
   printf("%s, ", tmp->nombre);
@@ -225,7 +227,7 @@ void imprimirDatosCanciones (cancion* tmp)
 
 void buscarCancionNombre(listaCanciones* listaCancion, char* nombre)
 {
-  int cont = 0;
+  int cont = 0;//Si se encuentra la cancion aumenta, si no esta se mantiene en 0
   cancion* tmp = firstList(listaCancion->ListaReproduccion);
   while(tmp != NULL)
   {
@@ -245,7 +247,7 @@ void buscarCancionNombre(listaCanciones* listaCancion, char* nombre)
 
 void buscarCancionGenero(listaCanciones* listaCancion, char* genero)
 {
-  int cont = 0;
+  int cont = 0;//Si se encuentra la cancion aumenta, si no esta se mantiene en 0
   cancion* tmp = (cancion*)firstList(listaCancion->ListaReproduccion);
   char* tmpGenero;
   while (tmp != NULL)
@@ -271,7 +273,7 @@ void buscarCancionGenero(listaCanciones* listaCancion, char* genero)
 
 void buscarCancionArtista(listaCanciones* listaCancion, char* artista)
 {
-  int cont = 0;
+  int cont = 0;//Si se encuentra la cancion aumenta, si no esta se mantiene en 0
   cancion* tmp = (cancion*)firstList(listaCancion->ListaReproduccion);
   while (tmp != NULL)
   {
@@ -389,7 +391,7 @@ void imprimirOpcionesMenu()
 
 void menu(listaCanciones* listaCancion)
 {
-  int opcion;
+  int opcion;// Almacena la opcion ingresada por el usuario
   List* datos = createList(); //Almacena los datos de las listas, la cantidad de cada una.
   List* generosSinCortar= createList(); //Almacena los generos sin ser separados.
   while(1)
@@ -405,25 +407,25 @@ void menu(listaCanciones* listaCancion)
     {
       case 1:
       {
-        printf("Ingrese el archivo a importar:\n");
         char* nombreArchivo = NULL;
+        printf("Ingrese el archivo a importar:\n");
         leerChar(&nombreArchivo);
         guardarCanciones(listaCancion, nombreArchivo, datos, generosSinCortar);
         break;
       }
       case 2:
       {
+        char* archivoExportar;
         printf("Ingrese el nombre del archivo al que desea importar las cacniones\n");
-        char* archivo;
-        leerChar(&archivo);
-        exportarCanciones(listaCancion, archivo, generosSinCortar);
+        leerChar(&archivoExportar);
+        exportarCanciones(listaCancion, archivoExportar, generosSinCortar);
         break;
       }
       case 3:
       {
+        char* genero;
         cancion* cancionUsuario = (cancion*) calloc (1, sizeof(cancion));
         cancionUsuario->genero = createList();
-        char* genero;
         printf("Ingrese el nombre de la cancion:\n");
         leerChar(&cancionUsuario->nombre);
         printf("Ingrese el artista de la cancion:\n");
@@ -507,10 +509,10 @@ void menu(listaCanciones* listaCancion)
       scanf("%d", &opcion);
       getchar();
     } while (opcion < 1 || opcion > 2);
-      if (opcion == 2)
-      {
-        printf("Gracias por utilizar el programa\n");
-        break;
-      }
+    if (opcion == 2)
+    {
+      printf("Gracias por utilizar el programa\n");
+      break;
+    }
   }
 }
